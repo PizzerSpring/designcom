@@ -1,5 +1,41 @@
-/* Css */
-
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
-  background: red;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.header {
+  margin: 0 auto;
+  padding: 43px 70px 50px 70px;
+  background: #000000;
+}
+
+.header__container {
+  max-width: 1095px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  color: #ffffff;
+  text-transform: uppercase;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+
+}
+
+.link {
+  padding-left: 15px;
+}
+
+.linka {
+  text-decoration: none;
+  color: #ffffff;
 }
