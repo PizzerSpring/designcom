@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -8,35 +9,35 @@ body {
 }
 /* header */
 .header {
-  margin: 0 auto;
-  padding: 43px 70px 50px 70px;
   background: #000000;
 }
 
-.header__container {
+.container {
+  margin: 0 auto;
   max-width: 1095px;
+}
+
+.header__inner {
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav {
+.menu__list {
   color: #ffffff;
   text-transform: uppercase;
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  gap: 20px;
 }
 
 .logo {
 }
 
-.link {
-  display: inline-block;
-  margin-right: 15px;
-}
 
-.linka {
+
+.menu__list-link {
   text-decoration: none;
   color: #ffffff;
 
