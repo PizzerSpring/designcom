@@ -32,15 +32,9 @@ body {
   gap: 20px;
 }
 
-.logo {
-}
-
-
-
 .menu__list-link {
   text-decoration: none;
   color: #ffffff;
-
 }
 
 /* com */
@@ -99,12 +93,17 @@ body {
   margin-bottom: 42px;
 }
 
-.slide {
+.slide1, .slide2, .slide3 {
   display: inline-block;
   height: 10px;
   width: 10px;
-  background: #b88b58;
-  border: 2px solid #b88b58;
+  background: transparent;
+  border: 1px solid #b88b58;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slide-active {
+  background: #b88b58;
+  border: 2px solid #b88b58;
 }
