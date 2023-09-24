@@ -107,3 +107,66 @@ body {
   background: #b88b58;
   border: 2px solid #b88b58;
 }
+
+/* about us */
+
+.aboutus {
+  background: #f7f7f7;
+}
+
+.aboutus__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutus__title {
+  margin-top: 65px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.aboutus__signature {
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #aeaeae;
+}
+
+.title__container {
+  text-align: center;
+}
+
+.aboutus__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutus__text {
+  margin-top: 55px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #242424;
+  width: 95%;
+}
+
+.aboutus__btn {
+  display: inline-block;
+  margin-top: 40px;
+  height: 50px;
+  background: #b88b58;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  width: 192px;
+  font-weight: 700;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.video {
+  margin-top: 45px;
+}
