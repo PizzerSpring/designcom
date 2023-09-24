@@ -30,6 +30,7 @@ const path = {
         js: distPath + "assets/js",
         images: distPath + "assets/images",
         fonts: distPath + "assets/fonts",
+        videos: distPath + "assets/videos"
     },
     src: {
         html: srcPath + "*.html",
@@ -37,6 +38,7 @@ const path = {
         js: srcPath + "assets/js/*.js",
         images: srcPath + "assets/images/**/*.{jpeg,png,svg,giv,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        videos: srcPath + "assets/videos/**/*.{mp4,webm,ogg}"
     },
     watch: {
         html: srcPath + "**/*.html",
@@ -44,6 +46,7 @@ const path = {
         js: srcPath + "assets/js/**/*.js",
         images: srcPath + "assets/images/**/*.{jpeg,png,svg,giv,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        videos: srcPath + "assets/videos/**/*.{mp4,webm,ogg}"
     },
     clean: "./" + distPath
 }
@@ -135,6 +138,12 @@ function fonts() {
         .pipe(browserSync.reload({stream: true}));
 }
 
+function videos() {
+    return src(path.src.videos, {base: srcPath + "assets/videos/"})
+        .pipe(dest(path.build.videos))
+        .pipe(browserSync.reload({stream: true}));
+}
+
 function clean() {
     return del(path.clean)
 }
@@ -145,9 +154,10 @@ function watchFiles() {
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.images], images);
     gulp.watch([path.watch.fonts], fonts);
+    gulp.watch([path.watch.videos], videos);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, videos));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
@@ -155,6 +165,7 @@ exports.css = css;
 exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
+exports.videos = videos;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
